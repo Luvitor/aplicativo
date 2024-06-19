@@ -8,17 +8,37 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class ModeloCidade extends AppCompatActivity {
+public class ModeloCidade {
+    private String nome;
+    private int imagem;
+    private int rating;
+}
+public ModeloCidade(String nome, int imagem, int rating) {
+    this.nome = nome;
+    this.imagem = imagem;
+    this.rating = rating;
+}
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.modelo_cidade);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
-    }
+public String getnome() {
+    return nome;
+}
+
+public void setnome(String nome) {
+    this.nome() = nome;
+}
+
+public int getImagem() {
+    return imagem;
+}
+
+public void setImagem(int imagem) {
+    this.imagem = imagem;
+}
+
+public int getRating() {
+    return rating;
+}
+
+public void setRating(int rating) {
+    this.rating = rating;
 }
